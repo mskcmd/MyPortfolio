@@ -2,8 +2,7 @@
 
 A modern, responsive portfolio website built with React, showcasing my projects and skills.
 
-![Portfolio Screenshot](screenshot.png)
-
+![Portfolio Screenshot](src/assets/image.png)
 ## 🌟 Features
 
 - 📱 Fully responsive design
