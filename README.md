@@ -60,9 +60,9 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 **Your Name**
 
-- GitHub: [@yourusername](https://github.com/mskcmd)
-- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/muhammed-suhail-k-343748277/)
-- Website: [Your Website](https://yourwebsite.com)
+- GitHub: [@Suhail](https://github.com/mskcmd)
+- LinkedIn: [Suhail](https://www.linkedin.com/in/muhammed-suhail-k-343748277/)
+- Website: [Suhail](https://yourwebsite.com)
 
 ## 🙏 Acknowledgements
 
