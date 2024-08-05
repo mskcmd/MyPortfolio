@@ -115,7 +115,7 @@ const projects = [
         `,
         image: "https://github.com/mskcmd/MyPortfolio/blob/main/src/assets/image.png?raw=true",
         githubLink: "https://github.com/mskcmd/MyPortfolio?tab=readme-ov-file",
-        liveLink: "my-portfoliosuhail-mskcmds-projects.vercel.app",
+        liveLink: "https://my-portfoliosuhail-p05w4pdmf-mskcmds-projects.vercel.app/",
         technologies: ["React", "Vite", "Tailwind CSS", "EmailJS", "React Icons"]
       }
       
