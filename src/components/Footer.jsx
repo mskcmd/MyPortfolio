@@ -21,17 +21,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="flex justify-center mt-4 md:hidden space-x-4">
-          <a href="https://github.com/mskcmd" className="text-custom hover:text-accent">
-            <FaGithub size={20} />
-          </a>
-          <a href="https://www.linkedin.com/in/muhammed-suhail-k-343748277/" className="text-custom hover:text-accent">
-            <FaLinkedin size={20} />
-          </a>
-          <a href="https://x.com/msuhailcmd" className="text-custom hover:text-accent">
-            <FaSquareXTwitter size={20} />
-          </a>
-        </div>
+  
       </div>
     </footer>
   );
