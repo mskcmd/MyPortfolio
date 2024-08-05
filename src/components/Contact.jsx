@@ -36,6 +36,7 @@ const ContactPage = () => {
             sendEmail(e);
         }
     };
+console.log(import.meta.env.REACT_APP_EMAILJS_USER_ID);
 
     const sendEmail = (e) => {
         e.preventDefault();

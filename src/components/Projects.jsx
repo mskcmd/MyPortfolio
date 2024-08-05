@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaTimes } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+
 const projects = [
     {
         id: 1,
@@ -18,7 +19,7 @@ const projects = [
         - Payment Processing: Integrated Razorpay for secure payment processing with multiple payment options.
         - Hosting: Deployed on AWS EC2 with Route 53 and Nginx as the web server.
       `,
-        image: 'https://via.placeholder.com/300x200',
+        image: 'https://scontent-bom2-1.xx.fbcdn.net/v/t39.30808-6/453970178_122104283300449942_172269100955854476_n.jpg?stp=dst-jpg_p180x540&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=w90aei3m_foQ7kNvgECfLze&_nc_ht=scontent-bom2-1.xx&oh=00_AYDxJwYq-VvDNYdBzQfSAZm4Oe9z0IN8Bb3b3Vn42IKZTg&oe=66B60C61',
         githubLink: 'https://github.com/mskcmd/keyzen-shop',
         liveLink: 'https://keyzen.shop',
         technologies: ['MongoDB', 'Express.js', 'EJS', 'Node.js', 'AWS EC2', 'Nginx', 'Razorpay', 'Multer', 'Nodemailer']
@@ -96,12 +97,30 @@ const projects = [
         - CRUD Operations: Create, Read, Update, and Delete tasks.
         - User Interface: Designed a clean and user-friendly interface for managing tasks.
       `,
-        image: 'https://via.placeholder.com/300x200',
+        image: 'https://i.ytimg.com/vi/PLhTcxCQJ6Y/maxresdefault.jpg',
         githubLink: 'https://github.com/yourusername/todo-app',
         liveLink: 'https://todoapp.com',
         technologies: ['React']
     },
+    {
+        id: 7,
+        title: "Portfolio Website",
+        description: "A beautifully responsive portfolio showcasing my skills with animations and live email functionality.",
+        longDescription: `
+        Developed a portfolio website using React and Vite to showcase my skills and projects:
+        - Design: Implemented a modern and responsive design using Tailwind CSS.
+        - Animations: Integrated smooth animations to enhance the user experience.
+        - Live Email: Utilized EmailJS for live email functionality, allowing users to contact me directly from the website.
+        - Icons: Used React Icons to visually represent different sections and skills.
+        `,
+        image: "https://github.com/mskcmd/MyPortfolio/blob/main/src/assets/image.png?raw=true",
+        githubLink: "https://github.com/mskcmd/MyPortfolio?tab=readme-ov-file",
+        liveLink: "https://yourportfoliowebsite.com",
+        technologies: ["React", "Vite", "Tailwind CSS", "EmailJS", "React Icons"]
+      }
+      
 ];
+
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -119,35 +138,61 @@ const Projects = () => {
     };
 
     return (
-        <section id="projects" className="py-12 bg-gray-100">
+        <section id="projects" className="py-16 bg-gradient-to-b from-gray-100 to-white">
             <div className="container mx-auto px-4">
                 <motion.h2
-                    className="text-3xl font-bold text-center mb-8 text-gray-800"
+                    className="text-3xl font-bold text-center mb-1 text-gray-800"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
                     My Projects
                 </motion.h2>
+                <motion.p
+                    className="text-center text-gray-600 mb-8 text-sm"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                    Showcasing {projects.length} innovative projects
+                </motion.p>
                 <div className="relative">
                     <div className="flex justify-between items-center mb-4">
-                        <button onClick={prevProjects} className="text-accent hover:text-accent-dark">Previous</button>
-                        <button onClick={nextProjects} className="text-accent hover:text-accent-dark">Next</button>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={prevProjects}
+                            className="bg-accent text-white p-2 rounded-full shadow-md"
+                        >
+                            <FaChevronLeft size={14} />
+                        </motion.button>
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={nextProjects}
+                            className="bg-accent text-white p-2 rounded-full shadow-md"
+                        >
+                            <FaChevronRight size={14} />
+                        </motion.button>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {projects.slice(currentIndex, currentIndex + 3).map((project, index) => (
                             <motion.div
                                 key={project.id}
-                                className="bg-white rounded-lg overflow-hidden shadow-md"
+                                className="bg-white rounded-lg overflow-hidden shadow-md transform transition duration-300 hover:scale-105"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.3, delay: index * 0.1 }}
                             >
+                                <div className="relative">
+                                    <img src={project.image} alt={project.title} className="w-full h-40 object-cover" />
+                                    <div className="absolute top-0 left-0 bg-accent text-white text-sm font-bold p-1 rounded-br-lg">
+                                        #{currentIndex + index + 1}
+                                    </div>
+                                </div>
                                 <div className="p-4">
-                                    <img src={project.image} alt={project.title} className="w-full h-48 object-cover mb-4" />
                                     <h3 className="text-lg font-semibold mb-2 text-gray-800 truncate">{project.title}</h3>
-                                    <p className="text-sm text-gray-600 mb-3 h-12 overflow-hidden">{project.description}</p>
-
+                                    <p className="text-xs text-gray-600 mb-3 h-10 overflow-hidden">{project.description}</p>
                                     <div className="flex flex-wrap gap-1 mb-3">
                                         {project.technologies.slice(0, 3).map((tech) => (
                                             <span key={tech} className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">
@@ -158,7 +203,7 @@ const Projects = () => {
                                     <motion.button
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="bg-accent text-white px-3 py-1 rounded-full text-xs font-medium w-full"
+                                        className="bg-accent text-white px-3 py-1 rounded-lg text-xs font-medium w-full transition duration-300 ease-in-out transform hover:bg-accent-dark"
                                         onClick={() => handleViewDetails(project)}
                                     >
                                         View Details
@@ -173,7 +218,7 @@ const Projects = () => {
             <AnimatePresence>
                 {selectedProject && (
                     <motion.div
-                        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+                        className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -186,14 +231,14 @@ const Projects = () => {
                         >
                             <div className="p-6">
                                 <div className="flex justify-between items-center mb-4">
-                                    <h3 className="text-2xl font-semibold text-gray-800">{selectedProject.title}</h3>
+                                    <h3 className="text-2xl font-bold text-gray-800">{selectedProject.title}</h3>
                                     <motion.button
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
                                         className="text-gray-500 hover:text-gray-700"
                                         onClick={() => setSelectedProject(null)}
                                     >
-                                        <FaTimes />
+                                        <FaTimes size={20} />
                                     </motion.button>
                                 </div>
                                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">{selectedProject.longDescription}</p>
@@ -204,11 +249,13 @@ const Projects = () => {
                                         </span>
                                     ))}
                                 </div>
-                                <div className="flex space-x-4">
-                                    <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center text-black hover:text-black transition duration-300 text-sm">
+                                <div className="flex space-x-3">
+                                    <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer" 
+                                       className="flex items-center bg-gray-800 text-white px-3 py-1 rounded-lg transition duration-300 hover:bg-gray-700 text-sm">
                                         <FaGithub className="mr-1" /> GitHub
                                     </a>
-                                    <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center text-black hover:text-black transition duration-300 text-sm">
+                                    <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" 
+                                       className="flex items-center bg-accent text-white px-3 py-1 rounded-lg transition duration-300 hover:bg-accent-dark text-sm">
                                         <FaExternalLinkAlt className="mr-1" /> Live Demo
                                     </a>
                                 </div>
