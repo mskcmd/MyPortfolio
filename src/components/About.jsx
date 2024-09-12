@@ -47,7 +47,7 @@ const About = () => {
             strong knowledge of data structures and algorithms.</p>
 
           <motion.a
-            href="https://drive.google.com/file/d/1RxPOTrf6rMXBQjXGCVMH7YdvehMvZCrL/view?usp=sharing"
+            href="https://drive.google.com/file/d/1XYYCMpo0a5REjBHEn4i-2axbvYn0qdl_/view?usp=sharing"
             className="bg-accent text-white font-bold py-2 px-4 rounded hover:bg-opacity-80"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

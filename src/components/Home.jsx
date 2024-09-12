@@ -4,7 +4,7 @@ import image from "../assets/suhail.png";
 
 const Home = () => {
   return (
-    <section id="home" className="bg-gradient-to-r from-white to-white text-black py-[19vh] ">
+    <section id="home" className="bg-gradient-to-r from-white to-white text-black py-[10vh] ">
       <div className="container mx-auto px-6 mt-11">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <motion.div
@@ -20,8 +20,7 @@ const Home = () => {
               Full Stack Developer
             </h2>
             <p className="text-xl mb-8">
-              I'm passionate about creating amazing digital experiences
-            </p>
+            Self-taught MERN stack developer with a strong focus on scalable distributed systems and problem-solving            </p>
             <div className="flex space-x-4">
               <motion.a
                 href="#contact"  // Update with the actual id or path of your contact section/page
@@ -32,7 +31,7 @@ const Home = () => {
                 Hire me
               </motion.a>
               <motion.a
-                href="https://drive.google.com/file/d/1RxPOTrf6rMXBQjXGCVMH7YdvehMvZCrL/view?usp=sharing"
+                href="https://drive.google.com/file/d/1XYYCMpo0a5REjBHEn4i-2axbvYn0qdl_/view?usp=sharing"
                 className="bg-white text-accent font-bold py-2 px-4 rounded border-2 border-accent hover:bg-accent hover:text-white"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
