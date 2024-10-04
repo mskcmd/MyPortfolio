@@ -31,7 +31,7 @@ const Home = () => {
                 Hire me
               </motion.a>
               <motion.a
-                href="https://drive.google.com/file/d/1XYYCMpo0a5REjBHEn4i-2axbvYn0qdl_/view?usp=sharing"
+                href="https://drive.google.com/file/d/1SsP--kK3YLcxQ0ua_lsZIfVVd_nluExi/view?usp=sharing"
                 className="bg-white text-accent font-bold py-2 px-4 rounded border-2 border-accent hover:bg-accent hover:text-white"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

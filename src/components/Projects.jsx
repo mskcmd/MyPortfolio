@@ -27,7 +27,7 @@ const projects = [
         - Hosting: Deployed on AWS EC2 with Route 53 and Nginx as the web server.
       `,
     image:
-      "https://scontent.fcok4-1.fna.fbcdn.net/v/t39.30808-6/453970178_122104283300449942_172269100955854476_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=YJeQtd5ShxUQ7kNvgGlrLVG&_nc_ht=scontent.fcok4-1.fna&_nc_gid=AW-FCrFN9HK_foF1vlxynPf&oh=00_AYAIJHQTNcttuWtbfEJ6NlaEsXXbiaMDmlfE031M4NNpAg&oe=66E82561",
+      "https://scontent-bom2-1.xx.fbcdn.net/v/t39.30808-6/453970178_122104283300449942_172269100955854476_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=JODC2MFls0YQ7kNvgGfrmdV&_nc_ht=scontent-bom2-1.xx&_nc_gid=A-VSqKDgRI7VdKFmVHkS_2p&oh=00_AYAFvQduGLmiXQV8KJZWPFmMhW2GjkcaCD3zCt-flR4d7A&oe=67052661",
     githubLink: "https://github.com/mskcmd/keyzen-shop",
     liveLink: "https://keyzen.shop",
     technologies: [
